@@ -1,0 +1,18 @@
+{
+  "name": "Bolt Manifest",
+  "bolt-code-snippet.js": "bolt/public/en/bolt-code-snippet-bundle-9cbb87985f006c863a8a.js",
+  "bolt-code-snippet.js.map": "bolt/public/en/bolt-code-snippet-bundle-9cbb87985f006c863a8a.js.map",
+  "bolt-components-critical-css.js": "bolt/public/en/bolt-components-critical-css.js",
+  "bolt-components-critical-css.js.map": "bolt/public/en/bolt-components-critical-css.js.map",
+  "bolt-components-critical-css-vars.js": "bolt/public/en/bolt-components-critical-css-vars.js",
+  "bolt-components-critical-css-vars.js.map": "bolt/public/en/bolt-components-critical-css-vars.js.map",
+  "bolt-components-critical-fonts.css": "bolt/public/en/bolt-components-critical-fonts.css",
+  "bolt-components-critical-fonts.js": "bolt/public/en/bolt-components-critical-fonts.js",
+  "bolt-components-critical-fonts.js.map": "bolt/public/en/bolt-components-critical-fonts.js.map",
+  "bolt-global.css": "bolt/public/en/bolt-global.css",
+  "bolt-global.js": "bolt/public/en/bolt-global.js",
+  "bolt-global.js.map": "bolt/public/en/bolt-global.js.map",
+  "vendors.js": "bolt/public/en/vendors-bundle-fe0fcd0ae4493b026b8e.js",
+  "vendors.js.map": "bolt/public/en/vendors-bundle-fe0fcd0ae4493b026b8e.js.map",
+  "fonts/index.scss": "bolt/public/en/fonts/opensans-semibolditalic.woff2"
+}

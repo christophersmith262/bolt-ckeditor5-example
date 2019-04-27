@@ -1,42 +1,20 @@
-import Command from '@ckeditor/ckeditor5-core/src/command';
-import BoltButtonEditing from './bolt-button-editing';
-import BoltButtonUI from './bolt-button-ui';
-import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
+import BoltButtonEditing from './bolt-button-editing'
+import BoltButtonToolbar from './bolt-button-toolbar'
+import BoltButtonInsertCommand from './bolt-button-insert-command'
+import BoltButtonStyleCommand from './bolt-button-style-command'
+import BoltButtonSizeCommand from './bolt-button-size-command'
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin'
 
 export default class BoltButton extends Plugin {
 
   init() {
-    this.editor.commands.add( 'insertBoltButton', new InsertBoltButtonCommand( this.editor ) );
+    this.editor.commands.add('insertBoltButton', new BoltButtonInsertCommand(this.editor))
+    this.editor.commands.add('boltButtonStyle', new BoltButtonStyleCommand(this.editor))
+    this.editor.commands.add('boltButtonSize', new BoltButtonSizeCommand(this.editor))
   }
 
   static get requires() {
-    return [ BoltButtonEditing, BoltButtonUI ];
+    return [BoltButtonEditing, BoltButtonToolbar]
   }
 
-}
-
-class InsertBoltButtonCommand extends Command {
-    execute() {
-      this.editor.model.change( writer => {
-          this.editor.model.insertContent( createBoltButton( writer ) );
-      } );
-    }
-
-    refresh() {
-        const model = this.editor.model;
-        const selection = model.document.selection;
-        const allowedIn = model.schema.findAllowedParent( selection.getFirstPosition(), 'bolt-button' );
-
-        this.isEnabled = allowedIn !== null;
-    }
-}
-
-function createBoltButton( writer ) {
-  const boltButton = writer.createElement( 'bolt-button' );
-  const boltButtonTitle = writer.createElement( 'bolt-button__title' );
-
-  writer.append(writer.createText('change me!'), boltButtonTitle);
-  writer.append(boltButtonTitle, boltButton);
-
-  return boltButton;
 }

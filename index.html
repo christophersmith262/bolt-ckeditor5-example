@@ -6,6 +6,10 @@
         <link rel="stylesheet" type="text/css" href="bolt/public/en/bolt-global.css">
         <link rel="stylesheet" type="text/css" href="bolt/public/en/bolt-components-critical-fonts.css">
         <style>
+          .ck .ck-editor__editable {
+            min-height: 250px;
+          }
+
           .ck span.ck-editor__nested-editable:hover {
             cursor: text !important;
           }
@@ -22,7 +26,7 @@
         <div id="editor">
           <h1>Teaser header.</h1>
           <p>Short-form text to appear under the header.</p>
-          <bolt-button><span>change me!</span></bolt-button>
+          <bolt-button size="large"><span>change me!</span></bolt-button>
         </div>
 
         <script src="dist/bundle.js"></script>
